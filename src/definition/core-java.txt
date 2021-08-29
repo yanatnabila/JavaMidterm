@@ -62,73 +62,162 @@ Answer: a class is a Blueprint, a collection of methods and instructions of how 
 All JAVA code is defined in a class. a class is a compiled from a .java file.,it behaves like a template,it is used to create object instances and it declares methods.
 
 What is an object?
-Answer:
+Answer:It is an instance of a class, an entity that has state and behavior. an object has 3 characteristics:
+State: represents the data (value) of an object.
+Behavior: represents the behavior (functionality) of an object such as deposit, withdraw, etc.
+Identity: An object identity is typically implemented via a unique ID. The value of the ID is not visible to the external user.
+However, it is used internally by the JVM to identify each object uniquely.
 
 What is the entry point of an application?
-Answer:
+.
+Answer:If you have an application bundled in a JAR file, you need some way to indicate which class within the
+JAR file is your application's entry point. You provide this information with the Main-Class header in the manifest,
+which has the general form:  Main-Class: classname
+The value classname is the name of the class that is your application's entry point.Recall that the entry point is a class having a method
+with signature public static void main(String[] args).
+After you have set the Main-Class header in the manifest, you then run the JAR file using the following form of the java command:
+ java -jar JAR-name
+ The main method of the class specified in the Main-Class header is executed
 
 Why is the main() static?
-Answer:
+Answer:  Whenever there is a static keyword besides a variable or function, it belongs to the class itself. A static variable is initialized at the commencing of the program, and only a one-time declaration is required. Only one copy of the variable is shared among all the instances of the class.
+       members are shared with all instances of the classes. Whenever a static keyword is applied, it signifies it doesn’t require any instance to access the variable and function, it can be accessed directly by the class itself.
 
 Which class is the superclass of all classes?
-Answer:
+Answer:Object class (Java.lang.Object class is the root or superclass of the class hierarchy, which is present in java.lang package. All predefined classes and user-defined classes are the subclasses from Object class.)
 
 What is difference between path and classpath variables?
-Answer:
+Answer:path variable is used to set the path for all Java software tools like javac.exe, java.exe, javadoc.exe, and so on.
+classpath variable is used to set the path for java classes.
 
 What is the difference between an Interface and Abstract class?
 Answer:
-
-Can you make an Object from an Interface and Abstract class? If yes or no, how would you do it?
-Answer:
+Abstract class and interface both are used to achieve abstraction where we can declare the abstract methods.
+ they both can't be instantiated. but
+1) Abstract class can have abstract and non-abstract methods.
+Interface can have only abstract methods. Since Java 8, it can have default and static methods also.
+2) Abstract class doesn't support multiple inheritance.
+Interface supports multiple inheritance.
+3) Abstract class can have final, non-final, static and non-static variables.
+Interface has only static and final variables.
+4) Abstract class can provide the implementation of interface.
+Interface can't provide the implementation of abstract class.
+5) The abstract keyword is used to declare abstract class.
+The interface keyword is used to declare interface.
+6) An abstract class can extend another Java class and implement multiple Java interfaces.
+An interface can extend another Java interface only.
+7) An abstract class can be extended using keyword "extends".
+An interface can be implemented using keyword "implements".
+8) A Java abstract class can have class members like private, protected, etc.
+Members of a Java interface are public by default.
 
 What is Access Modifier?
-Answer:
+Answer:The access modifiers in Java specifies the accessibility or scope of a field, method, constructor, or class.
+We can change the access level of fields, constructors, methods, and class by applying the access modifier on it.
+There are four types of Java access modifiers:
+  1-Private: The access level of a private modifier is only within the class. It cannot be accessed from outside the class.
+  2-Default: The access level of a default modifier is only within the package. It cannot be accessed from outside the package. If you do not specify any access level, it will be the default.
+  3-Protected: The access level of a protected modifier is within the package and outside the package through child class. If you do not make the child class, it cannot be accessed from outside the package.
+  4-Public: The access level of a public modifier is everywhere. It can be accessed from within the class, outside the class, within the package and outside the package.
 
 What is OOP? Define each OOP concept.
-Answer:
+Answer:Object-Oriented Programming is a paradigm that provides many concepts, such as inheritance, data binding, polymorphism, etc.
+The main aim of object-oriented programming is to implement real-world entities, for example, object, classes, abstraction, inheritance, polymorphism, etc.
+ -Simula is considered the first object-oriented programming language. The programming paradigm where everything is represented as an object is known as a truly object-oriented programming language.
+ -Smalltalk is considered the first truly object-oriented programming language.
+ -The popular object-oriented languages are Java, C#, PHP, Python, C++, et
+Object means a real-world entity such as a pen, chair, table, computer, watch, etc. Object-Oriented Programming is a methodology or paradigm to design a program using classes and objects. It simplifies software development and maintenance by providing some concepts:
+-Object:Any entity that has state and behavior is known as an object. For example, a chair, pen, table, keyboard, bike, etc. It can be physical or logical.
+ An Object can be defined as an instance of a class. An object contains an address and takes up some space in memory. Objects can communicate without knowing the details of each other's data or code. The only necessary thing is the type of message accepted and the type of response returned by the objects.
+-Class:Collection of objects is called class. It is a logical entity.
+ A class can also be defined as a blueprint from which you can create an individual object. Class doesn't consume any space.
+-Inheritance:When one object acquires all the properties and behaviors of a parent object, it is known as inheritance. It provides code reusability. It is used to achieve runtime polymorphism.
+-Polymorphism: If one task is performed in different ways, it is known as polymorphism. For example: to convince the customer differently, to draw something, for example, shape, triangle, rectangle, etc.
+-Abstraction: Hiding internal details and showing functionality is known as abstraction. For example phone call, we don't know the internal processing.
+-Encapsulation:Binding (or wrapping) code and data together into a single unit are known as encapsulation. For example, a capsule, it is wrapped with different medicines.
 
 What is Java Package and which package is imported by default?
-Answer:
+Answer:In Java, the package is the collection of Java classes and interfaces. When we use the classes of a particular package, we need to import that particular package in which that classes are defined. The class uses the fully qualified name that includes the package name. In most of the basic Java programs, we do not import any package.
+JVM internally imports java.lang.package by default. It provides the fundamental classes that are necessary to design a basic Java program. The important classes are Object, which is the root of the class hierarchy, and Class, instances of which represent classes at run time.
 
 What is an API? List some API's that you have used so far.
-Answer:
-
+Answer:An API can be described as a way to enable computers to possess a common interface, to allow them to communicate with each other.
+Java Application Programming Interface (API) is the area of Java development kit (JDK). An API includes classes, interfaces, packages and also their methods, fields, and constructors.
+All these built-in classes give benefits to the programmer.  A user interface offers the basic user interaction between user and computer; in the same manner, the API works as an application program interface that gives connection amongst the software as well as the consumer. API includes classes and packages which usually assist a programmer in minimizing the lines of a program.
+some API's are: GraphQL, Rest, Restassured, SaopUI.
 Does java support multiple inheritance? Why or why not?
-Answer:
+Answer:Java does not support multiple inheritance.a class cannot extend more than one class. Multiple inheritances lead to ambiguity.
+Consider a case where class B extends class A and Class C and both class A and C have the same method display().
+Now java compiler cannot decide, which display method it should inherit. To prevent such situation, multiple inheritances is not allowed in java.
 
 What is method overloading and when does it happen?
-Answer:
+Answer:If a class of a Java program has a plural number of methods, and all of them have the same name but different parameters (with a change in type or number of arguments), and programmers can use them to perform a similar form of functions, then it is known as method overloading. If programmers what to perform one operation, having the same name, the method increases the readability if the program.
+Method Overloading is applied in a program when objects are required to perform similar tasks but different input parameters. Every time an object calls a method, Java matches up to the method name first and then the number and type of parameters to decide what definitions to execute. This process of assigning multiple tasks to the same method is known as Polymorphism. There are different ways to overload a method in Java. They are:
+Based on the number of parameters: In this case, the entire overloading concept depends on the number of parameters that are placed within the parenthesis of the method.
+Based on the data type of the parameter: With the arrangement of data type, within the parameter, overloading of the method can take place.
+Based on the sequence of data types in parameters: The method overloading also depends on the ordering of data types of parameters within the method.
+To create overloaded methods, programmers need to develop several different method definitions in the class, all have the same name, but the parameters list is different
 
 Explain exceptions in java and how to handle them.
-Answer:
+Answer:Exception is an abnormal condition.In Java, an exception is an event that disrupts the normal flow of the program. It is an object which is thrown at runtime.
+There are mainly two types of exceptions: checked and unchecked. An error is considered as the unchecked exception. However, according to Oracle, there are three types of exceptions namely:
+-Checked Exception
+-Unchecked Exception
+-Error
+Exception Handling is a mechanism to handle runtime errors such as ClassNotFoundException, IOException, SQLException, RemoteException, etc.
 
 What is static keyword? When and how do we use it?
-Answer:
+Answer:The Static Modifier
+       Static Variables
+       The static keyword is used to create variables that will exist independently of any instances created for the class. Only one copy of the static variable exists regardless of the number of instances of the class.
+       Static variables are also known as class variables. Local variables cannot be declared static.
+        Static Methods
+       The static keyword is used to create methods that will exist independently of any instances created for the class.
+       Static methods do not use any instance variables of any object of the class they are defined in. Static methods take all the data from parameters and compute something from those parameters, with no reference to variables.
+       Class variables and methods can be accessed using the class name followed by a dot and the name of the variable or method.
+The main feature of using the static keyword is, when a component of a class is marked with the static keyword, it belongs only to the class and not to the objects of the class.
 
 What is final keyword? When and how do we use it?
-Answer:
+Answer:The main feature of the final keyword is that when anything marked with the final keyword is initialized to a value, this initialized value cannot be changed i.e. the value becomes final or a constant value.
+
+       We can use the final keyword to mark a -:
+       Local variable:A local variable is declared within a method. Once a local variable declared with the final keyword is initialized with a value, you can't change that value. Although, if you still go ahead and assign a new value to a final local variable, it causes a compile error
+       Instance variable:Once a value is given to the final instance variable of a class, you cannot change its value. Although, if you still go ahead and give a new value to the instance variable of a class, it causes a compile error.
+       Method:Once a method is declared final in a class, it cannot be redefined or overridden by a subclass. But if we still try to override or give a new definition to a final method of a class, the compiler will throw a compile error
+       Class:Once a class is declared final, you cannot extend it. In other words, declaring a class final prevents it from being inherited by another class.
 
 Explain the difference between final, finally and finalize?
 Answer:
 
 What is a constructor?
-Answer:
+Answer:A constructor is used to create an object of a class using the new keyword, where an object is also known as an instance of a class. Each object of a class will have its own state (instance variables) and access to methods of its class.
+
+       Some important features of a constructor are -
+       A constructor always must have the same name as the class.
+       A constructor cannot have a return type.
+       A constructor may have any access modifier like private, protected, default, public.
+       A constructor is never inherited or overridden as it's not an instance method.
 
 Can we have multiple constructors in a class?
-Answer:
+Answer:A class can have multiple constructors with different types of arguments and different number of arguments.
 
 If we don't have a constructor declared, what is called during the object creation?
-Answer:
+Answer: if there is no constructor available in the class It calls a default constructor, Java compiler provides a default constructor by default.
 
 What is "this" keyword in Java? When would we use it?
-Answer:
+Answer:this is a reference variable that refers to the current object.
+this can be used to refer current class instance variable.
+this can be used to invoke current class method (implicitly)
+this() can be used to invoke current class constructor.
+this can be passed as an argument in the method call.
+this can be passed as argument in the constructor call.
+this can be used to return the current class instance from the method.
 
 What is "super" keyword in Java? What are some scenarios we would use it?
 Answer:
 
 What does JVM stand for?
-Answer:
+Answer:Java Virtual Machine
 
 Is JVM platform independent?
 Answer:
@@ -146,10 +235,11 @@ What is the difference between JVM and JRE?
 Answer:
 
 Explain the difference between compile-time and run-time?
-Answer:
+Answer:compile-time is putting a code together
+       run-time is when running the code
 
 What is heap?
-Answer:
+Answer:Heap is an area in the memory where the created objects goes.it is also called Grabage -collectible heap.
 
 How does Java manage its memory?
 Answer:
@@ -158,7 +248,7 @@ What is the difference between String, StringBuffer and StringBuilder?
 Answer:
 
 What is Singleton class?
-Answer:
+Answer:one object to create, one copy of any instance of class available.
 
 What is Serialization and Deserialization?
 Answer:
@@ -167,7 +257,7 @@ Explain the difference between While and Do..While loops?
 Answer:
 
 What is Enum?
-Answer:
+Answer: Enum is a data type, it is not an object, Enums are holding constance, Enums are extanding inside the class but not outside.
 
 What is Iterator?
 Answer:

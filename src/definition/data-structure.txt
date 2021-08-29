@@ -1,37 +1,105 @@
 ***ANSWER ALL QUESTIONS BELOW***
 
 Why do we need data structure?
-Answer:
+Answer:Data structures are utilized as a system for arranging and putting away data in virtual memory structures.
+Data structures sort out and organize data into datasets and databases that can be packed effectively to spare extra room.
+These hierarchical structures are likewise organized coherently so that recovering data from them is basic and direct,
+making the data usable again.  Some of these include Heaps, Linked Lists, Queues, Stacks,Bags,Binary Trees etc.
 
 What are the various operations that can be performed on different data structures?
-Answer:
+Answer:Design of efficient data structure must take operations to be performed on the data structures into account. The most commonly used operations on data structure are broadly categorized into following types
+
+       Create:- The create operation results in reserving memory for program elements. This can be done by declaration statement. Creation of data structure may take place either during compile-time or run-time. malloc() function of C language is used for creation.
+       Destroy:- Destroy operation destroys memory space allocated for specified data structure. free() function of C language is used to destroy data structure.
+       Selection:- Selection operation deals with accessing a particular data within a data structure.
+       Updation:- It updates or modifies the data in the data structure.
+       Searching:- It finds the presence of desired data item in the list of data items, it may also find the locations of all elements that satisfy certain conditions.
+       Sorting:- Sorting is a process of arranging all data items in a data structure in a particular order, say for example, either in ascending order or in descending order.
+       Merging:- Merging is a process of combining the data items of two different sorted list into a single sorted list.
+       Splitting:- Splitting is a process of partitioning single list to multiple list.
+       Traversal:- Traversal is a process of visiting each and every node of a list in systematic manner.
+
 
 When would we use data structures in the real world?
 Answer:
 
 What is an Array?
-Answer:
+Answer:An array is data structure (type of memory layout) that stores a collection of individual values that are of the same data type. Arrays are useful because instead of having to separately store related information in different variables (named memory locations), you can store them—as a collection—in just one variable. It is more efficient for a program to access and process the information in an array, than it is to deal with many separate variables.
 
 What is the difference between Array and ArrayList?
-Answer:
+Answer:Arrays are static whereas ArrayLists are dynamic
+       Arrays are not resizable, ArrayLists are resizable
+       Arrays can contain primitive data types, ArrayLists can not contian promitive types but we can use their wrapper classes whenever required.
+       Arrays are very fast when inserting the new elements, ArrayLists are bit slow when inserting new elements because it has to resize when it exceeds it max limit since its growable array
+       Arrays are a bit slow when retrieving the elements from it, search operation is fact in ArrayLists
+       The size of array we can et it by length property, Size of arraylist we can get it by size() method.
 
 What is a LinkedList?
-Answer:
+Answer:A linked list is a sequence of data structures, which are connected together via links.
+       Linked List is a sequence of links which contains items. Each link contains a connection to another link. Linked list is the second most-used data structure after array. Following are the important terms to understand the concept of Linked List.
+       Link − Each link of a linked list can store a data called an element.
+       Next − Each link of a linked list contains a link to the next link called Next.
+       LinkedList − A Linked List contains the connection link to the first link called First.
+       Linked List contains a link element called first.
+
+       Each link carries a data field(s) and a link field called next.
+       Each link is linked with its next link using its next link.
+       Last link carries a link as null to mark the end of the list.
+
+       Types of Linked List
+       Following are the various types of linked list.
+       Simple Linked List − Item navigation is forward only.
+       Doubly Linked List − Items can be navigated forward and backward.
+       Circular Linked List − Last item contains link of the first element as next and the first element has a link to the last element as previous.
 
 How is an Array different from LinkedList?
-Answer:
+Answer:Array is a datatype which is widely implemented as a default type, in almost all the modern programming languages, and is used to store data of similar type.
+But there are many use cases, like the one where we don't know the quantity of data to be stored, for which advanced data structures are required, and one such data structure is linked list.
+-Array is a collection of elements of similar data type. Linked List is an ordered collection of elements of same type, which are connected to each other using pointers.
+-Array supports Random Access, which means elements can be accessed directly using their index, like arr[0] for 1st element, arr[6] for 7th element etcHence, accessing elements in an array is fast with a constant time complexity of O(1)..Linked List supports Sequential Access, which means to access any element/node in a linked list, we have to sequentially traverse the complete linked list, upto that element.
+To access nth element of a linked list, time complexity is O(n).
+-In an array, elements are stored in contiguous memory location or consecutive manner in the memory.In a linked list, new elements can be stored anywhere in the memory.
+ Address of the memory location allocated to the new element is stored in the previous node of linked list, hence formatting a link between the two nodes/elements.
+-In array, Insertion and Deletion operation takes more time, as the memory locations are consecutive and fixed.In case of linked list, a new element is stored at the first free and available memory location, with only a single overhead step of storing the address of memory location in the previous node of linked list.
+Insertion and Deletion operations are fast in linked list.
+Memory is allocated as soon as the array is declared, at compile time. It's also known as Static Memory Allocation.Memory is allocated at runtime, as and when a new node is added. It's also known as Dynamic Memory Allocation.
+-In array, each element is independent and can be accessed using it's index value./ In case of a linked list, each node/element points to the next, previous, or maybe both nodes.
+-Array can be single dimensional, two dimensional or multidimensional./ Linked list can be Linear(Singly) linked list, Doubly linked list or Circular linked list linked list.
+-Size of the array must be specified at time of array decalaration./ Size of a Linked list is variable. It grows at runtime, as more nodes are added to it.
+-Array gets memory allocated in the Stack section./Whereas, linked list gets memory allocated in Heap section.
 
 What is a Queue?
-Answer:
+Answer:The queue interface is provided in java.util package and it implements the Collection interface. The queue implements FIFO i.e. First In First Out. This means that the elements entered first are the ones that are deleted first.
 
 What is a Stack (not Java memory - refers to data structure)?
-Answer:
+Answer:A Stack is a linear data structure that follows the LIFO (Last-In-First-Out) principle. Stack has one end, whereas the Queue has two ends (front and rear). It contains only one pointer top pointer pointing to the topmost element of the stack. Whenever an element is added in the stack, it is added on the top of the stack, and the element can be deleted only from the stack. In other words, a stack can be defined as a container in which insertion and deletion can be done from the one end known as the top of the stack.
 
 What is FIFO and LIFO?
-Answer:
+Answer:FIFO is an abbreviation for first in, first out. It is a method for handling data structures where the first element is processed first and the newest element is processed last.
+LIFO is an abbreviation for Last in, first out is same as first in, last out (FILO). It is a method for handling data structures where the last element is processed first and the first element is processed last.
 
 Explain Big O Notation?
-Answer:
+Answer:The Big O notation defines an upper bound of an algorithm, it bounds a function only from above. For example, consider the case of Insertion Sort. It takes linear time in best case and quadratic time in worst case. We can safely say that the time complexity of Insertion sort is O(n^2). Note that O(n^2) also covers linear time.
+       The general step wise procedure for Big-O runtime analysis is as follows:
+       Figure out what the input is and what n represents.
+       Express the maximum number of operations, the algorithm performs in terms of n.
+       Eliminate all excluding the highest order terms.
+       Remove all the constant factors.
+       Some of the useful properties on Big-O notation analysis are as follow:
+
+       Constant Multiplication:
+       If f(n) = c.g(n), then O(f(n)) = O(g(n)) ; where c is a nonzero constant.
+       Polynomial Function:
+       If f(n) = a0 + a1.n + a2.n2 + —- + am.nm, then O(f(n)) = O(nm).
+       Summation Function:
+       If f(n) = f1(n) + f2(n) + —- + fm(n) and fi(n)≤fi+1(n) ∀ i=1, 2, —-, m,
+       then O(f(n)) = O(max(f1(n), f2(n), —-, fm(n))).
+       Logarithmic Function:
+       If f(n) = logan and g(n)=logbn, then O(f(n))=O(g(n))
+       ; all log functions grow in the same manner in terms of Big-O.
+
+ Basically, this asymptotic notation is used to measure and compare the worst-case scenarios of algorithms theoretically. For any algorithm, the Big-O analysis should be straightforward as long as we correctly identify the operations that are dependent on n, the input size.
+Orders of magnitude is YET ANOTHER mathematical term which basically tells the difference between classes of numbers. Think the difference between 10 and 100. If you picture 10 of your closest friends and 100 people, that's a really big difference. Similarly, the difference between 1,000 and 10,000 is pretty big (in fact, its the difference between a junker car and a lightly used one). It turns out that in approximation, as long as you're within an order of magnitude, you're pretty close.
 
 What is the best case to search an element from an array?
 Answer:
