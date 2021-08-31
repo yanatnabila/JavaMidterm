@@ -214,25 +214,44 @@ this can be passed as argument in the constructor call.
 this can be used to return the current class instance from the method.
 
 What is "super" keyword in Java? What are some scenarios we would use it?
-Answer:
+Answer:Super keyword in Java is a reference variable used to refer to the immediate parent class(superclass) object. The super keyword in Java is used when we want to acquire a superclass member and use it in a derived class. When an instance of the child class is created, an instance of the superclass is also created.
+       The super keyword in Java comes into play with the concept of inheritance. So it is important to have a basic understanding of inheritance.
+       The super keyword in Java is used in the following scenarios:
+       super can be used to refer to a variable of the immediate parent class
+       super can be used to invoke the immediate parent class method.
+       super() can be used to access the immediate parent class constructor.
+       Let’s discuss each application of super keywords in detail with examples.
 
 What does JVM stand for?
 Answer:Java Virtual Machine
 
 Is JVM platform independent?
-Answer:
+Answer:JVM (Java virtual machine) is platform dependant while java language is platform independent. Jvm is one kind of interface or middleware between OS (Operating Systems) and java language.Jvm provides thd environment to execute the java file (. Class file). So at the end it's depends on your kernel. And kernel is differ from OS to OS.
 
 What version of Java are you using?
-Answer:
+Answer: java version "11.0.12" 2021-07-20 LTS
 
 What does JAR stand for?
-Answer:
+Answer:Java Runtime Environment
 
 What is the difference between JDK and JVM?
 Answer:
-
+The full form of JDK is Java Development Kit./The full form of JVM is Java Virtual Machine.
+JDK is a software development kit to develop applications in Java./JVM executes Java byte code and provides an environment for executing it.
+JDK is platform dependent./JVM is platform-independent.
+It contains tools for developing, debugging, and monitoring java code./Software development tools are not included in JVM.
+It is the superset of JRE./JVM is a subset of JRE.
+The JDK enables developers to create Java programs that can be executed and run by the JRE and JVM./It is the Java platform component that executes source code.
+JDK comes with the installer.
 What is the difference between JVM and JRE?
 Answer:
+The full form of JDK is Java Development Kit.	The full form of JRE is Java Runtime Environment.
+JDK is a software development kit to develop applications in Java.	It is a software bundle which provides Java class libraries with necessary components to run Java code.
+JDK is platform dependent.	JRE is also platform dependent.
+It contains tools for developing, debugging, and monitoring java code.	It contains class libraries and other supporting files that JVM requires to execute the program.
+It is the superset of JRE	It is the subset of JDK.
+The JDK enables developers to create Java programs that can be executed and run by the JRE and JVM.	The JRE is the part of Java that creates the JVM.
+JDK comes with the installer.	JRE only contain environment to execute source code.
 
 Explain the difference between compile-time and run-time?
 Answer:compile-time is putting a code together
@@ -242,73 +261,103 @@ What is heap?
 Answer:Heap is an area in the memory where the created objects goes.it is also called Grabage -collectible heap.
 
 How does Java manage its memory?
-Answer:
+Answer:the memory is managed automatically by the garbage collector. the garbage collector frees the memory in a regular period,the memory that is not used for long time.so that the garbage collector is used as an automatically managed memory.
 
 What is the difference between String, StringBuffer and StringBuilder?
 Answer:
+The String class represent character strings that is a sequence of characters together. A few methods included in this class are: charAt() method which takes an integer as input and will return the character at that location in the String object. compareTo() method compares two String objects and will return true if both the objects are the same. In this method the strings are case sensitive. The other method compareToIgnoreCase() will work exactly the same way as the previous one, but will ignore the casing of the characters in the string, which means they do consider characters of either upper case and lower case the same.
+The StringBuffer class holds a mutable sequence of characters which means, the characters in this object can be changed. It contains some particular sequence of characters, but the length and content of the sequence can be changed through certain method calls. Every StringBuffer object has a capacity. By default it will have a capacity of 16 characters. The append() method of this class is polymorphic. It takes multiple form, and is used to append the Boolean values, characters, strings, and subsets of strings to the existing object. The charAt() method works the same as it does in the String class. The capacity() method returns the current capacity of the StringBuffer object.
+The StringBuilder class also holds a mutable sequence of characters whereas it provides an API compatible with StringBuffer, but with no guarantee of synchronization. The append(), size(), charAt() methods works the same as it does in the StringBuffer class.
 
 What is Singleton class?
 Answer:one object to create, one copy of any instance of class available.
 
 What is Serialization and Deserialization?
-Answer:
+Answer:Serialization is a process in which the state of an object is converted into a byte stream,
+
+       On the other hand, convert byte stream back to class object is known as DeSerialization
 
 Explain the difference between While and Do..While loops?
-Answer:
+Answer:the differenсe between them: In while lоор, соnditiоn is evаluаted first аnd then the stаtements inside lоор bоdy gets exeсuted, оn the оther hаnd in dо-while lоор, stаtements inside dо-while gets exeсuted first аnd then the соnditiоn is evаluаted.
+       The if stаtement аlоne tells us thаt if а соnditiоn is true it will exeсute а blосk оf stаtements аnd if the соnditiоn is fаlse it wоn’t. We саn use the else stаtement with if stаtement tо exeсute а blосk оf соde when the соnditiоn is fаlse.
 
 What is Enum?
 Answer: Enum is a data type, it is not an object, Enums are holding constance, Enums are extanding inside the class but not outside.
 
 What is Iterator?
-Answer:
+Answer:An Iterator is an object that can be used to loop through collections, like ArrayList and HashSet. It is called an "iterator" because "iterating" is the technical term for looping.
 
 Which one will take more memory: an int or Integer? Why?
-Answer:
+Answer:An Integer object will take more memory,an Integer is an object, it  stores meta data overhead about the object and int is primitive type so its takes less space.
+Integer is an object which takes 128 bits (16 bytes) to store its int value.int is a primitive data type and takes 32 bits(4 bytes) to store.
 
 Why are Strings considered to be immutable in Java?
-Answer:
+Answer:The string is immutable means that we cannot change the object itself, but we can change the reference to the object. The string is made final to not allow others to extend it and destroy its immutability.
+Security Parameters are typically represented as String in network connections, database connection URLs, usernames/passwords, etc. If it was mutable, these parameters could be changed easily.
+Synchronization and Concurrency making String immutable automatically makes them thread safe thereby solving the synchronization issues.
+Caching when compiler optimizes our String objects, it seems that if two objects have the same value (a =" test", and b =" test") and thus we need only one string object (for both a and b, these two will point to the same object).
+Class loading String is used as arguments for class loading. If mutable, it could result in the wrong class being loaded (because mutable objects change their state).
 
 What is constructor chaining in Java?
-Answer:
+Answer:Constructor chaining is the process of calling one constructor from another constructor with respect to current object.
+       Constructor chaining can be done in two ways:
+        Within same class: It can be done using this() keyword for constructors in same class
+        From base class: by using super() keyword to call constructor from the base class.
 
 The difference between Serial and Parallel Garbage Collector?
-Answer:
-
+Answer:Serial Garbage Collector: This is the simplest GC implementation, as it basically works with a single thread. If we select Serial garbage collector as our default garbage collector then whenever we will call garbage collector to clean unused memory then serial garbage collector holds all the running threads of application i.e. It works by freezing all the application threads and It will create a single thread to perform garbage collection. It freezes all other running threads of application until garbage collection operations have concluded. If we use Serial Garbage Collector as our default garbage collector then the application throughput will decrease and application pause time will increase. As a result, this GC implementation freezes all application threads when it runs. Hence, it is not a good idea to use it in multi-threaded applications like server environments.
+Parallel Garbage Collector: Parallel Garbage Collector is the default garbage collector in Java 8. It is also known as Throughput collector. Parallel Garbage Collector is same as Serial Garbage Collector because Parallel Garbage Collector also freezes the running threads of the application while performing the garbage collection. But the difference is, Parallel Garbage Collector uses multiple threads to perform cleaning of unused heap area.
 What does JIT stands for?
-Answer:
+Answer:Just In Time compiler
 
 Explain the process of Java garbage collection?
-Answer:
+Answer:Garbage Collection in Java is a process by which the programs perform memory management automatically. The Garbage Collector(GC) finds the unused objects and deletes them to reclaim the memory. In Java, dynamic memory allocation of objects is achieved using the new operator that uses some memory and the memory remains allocated until there are references for the use of the object.
+When there are no references to an object, it is assumed to be no longer needed, and the memory, occupied by the object can be reclaimed. There is no explicit need to destroy an object as Java handles the de-allocation automatically.
+The technique that accomplishes this is known as Garbage Collection. Programs that do not de-allocate memory can eventually crash when there is no memory left in the system to allocate. These programs are said to have memory leaks.
 
 Can you guarantee the garbage collection process?
-Answer:
+Answer:No, Garbage collection does not guarantee that a program will not run out of memory.
 
 What is the difference between stack and heap in Java?
-Answer:
+Answer: It is managed by Java automatically. The JVM divides the memory into two parts: stack memory and heap memory. From the perspective of Java, both are important memory areas but both are used for different purposes. The major difference between Stack memory and heap memory is that the stack is used to store the order of method execution and local variables while the heap memory stores the objects and it uses dynamic memory allocation and deallocation. In this section, we will discuss the differences between stack and heap in detail.
 
 What is reflection in Java and why is it useful?
-Answer:
+Answer:Reflection is a feature in the Java programming language. It allows an executing Java program to examine or "introspect" upon itself, and manipulate internal properties of the program. For example, it's possible for a Java class to obtain the names of all its members and display them. The ability to examine and manipulate a Java class from within itself may not sound like very much, but in other programming languages this feature simply doesn't exist. For example, there is no way in a Pascal, C, or C++ program to obtain information about the functions defined within that program.
+One tangible use of reflection is in JavaBeans, where software components can be manipulated visually via a builder tool. The tool uses reflection to obtain the properties of Java components (classes) as they are dynamically loaded.
 
 What is multithreading in Java?
-Answer:
+Answer:Multithreading in Java is a process of executing two or more threads simultaneously to maximum utilization of CPU. Multithreaded applications execute two or more threads run concurrently. Hence, it is also known as Concurrency in Java. Each thread runs parallel to each other. Mulitple threads don’t allocate separate memory area, hence they save memory. Also, context switching between threads takes less time.
 
 What is synchronization in Java?
-Answer:
+Answer:Synchronization in Java is the capability to control the access of multiple threads to any shared resource.
+       Java Synchronization is better option where we want to allow only one thread to access the shared resource.
+The synchronization is mainly used to prevent thread interference.To prevent consistency problem.
+There are two types of synchronization: Process Synchronization- Thread Synchronization
 
 What is a Framework?
-Answer:
+Answer:Java Framework is the body or platform of pre-written codes used by Java developers to develop Java applications or web applications. In other words, Java Framework is a collection of predefined classes and functions that is used to process input, manage hardware devices interacts with system software. It acts like a skeleton that helps the developer to develop an application by writing their own code.
+Some of the most popular Java frameworks are:
+Spring
+Hibernate
+Grails
+Play
+JavaServer Faces (JSF)
+Google Web Toolkit (GWT)
+Quarkus
 
 What are the testing Frameworks available in Java?
-Answer:
+Answer:A framework describes a set of principles or guidelines that we can follow to accomplish the required outcomes in a systematic manner. The JAVA / J2EE apps and server elements can be tested in numerous ways, and for that, testing frameworks are available.
+Many are intended for unit or functional testing, while others are used for particular Java kinds of parts like viewing, logic, and validation. The benefit of using Testing Frameworks is that it increases testing speed and improves efficiency, and maintains accuracy throughout the process. It not only reduces the risks but also reduces the cost of test maintenance. Here in this article, we are going to see Testing Frameworks available for Java.
 
 What are jUnit and testNG?
-Answer:
+Answer:JUnit and TestNG are the most popular testing frameworks for Java applications. Both of these frameworks are easy to use. So when it comes to chose the testing framework for your application, it’s better to have a high-level idea of what features are present in one or the other and then take the informed decision based on your project requirements.
 
 What are the dependencies for this project?
 Answer:
 
 What is dependency injection in Java?
-Answer:
+Answer:Any application is composed of many objects that collaborate with each other to perform some useful stuff. Traditionally each object is responsible for obtaining its own references to the dependent objects (dependencies) it collaborate with. This leads to highly coupled classes and hard-to-test code.
+For example, consider a Car object. A Car depends on Wheels, Engine, Fuel, Battery, etc to run. Traditionally we define the brand of such dependent objects along with the definition of the Car object.
 
 Explain what static binding and dynamic binding is?
-Answer:
+Answer:Static Binding: The binding which can be resolved at compile time by compiler is known as static or early binding. Binding of all the static, private and final methods is done at compile-time .

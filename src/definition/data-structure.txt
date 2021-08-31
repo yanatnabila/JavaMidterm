@@ -103,12 +103,18 @@ Orders of magnitude is YET ANOTHER mathematical term which basically tells the d
 
 What is the best case to search an element from an array?
 Answer:
-
+for (i = 0; i < a.length-1; i++) {
+  if (a[i] < a[i + 1]) {
+    return true;
+  } else {
+    return false;
+  }
+}
 What is the worst case to search an element from an array?
-Answer:
+Answer:In the worst case analysis, we calculate upper bound on running time of an algorithm. We must know the case that causes maximum number of operations to be executed. For Linear Search, the worst case happens when the element to be searched (x in the above code) is not present in the array. When x is not present, the search() functions compares it with all the elements of arr[] one by one. Therefore, the worst case time complexity of linear search would be Θ(n).
 
 Describe what a tree data structure is?
-Answer:
+Answer:The data structure includes all forms of data from data management, data organization, and data storage so that proper access is given to the users who use the data for their business. All forms of data are collected and managed, relationships are maintained between them, and the operations related to data are carried out. The data can also be retrieved from the storage space. The basis of any data structure is to arrange data very well. The data can be accessed and worked appropriately in different ways. The two main structures are array and linked data structure.
 
 Describe what a graph data structure is?
 Answer:

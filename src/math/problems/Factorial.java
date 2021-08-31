@@ -1,5 +1,7 @@
 package math.problems;
 
+import java.util.Scanner;
+
 public class Factorial {
 
     /*
@@ -9,7 +11,10 @@ public class Factorial {
      */
 
     public static void main(String[] args) {
-
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter the number;");
+        int n = in.nextlnt();
+        Systen.out.println("Factorial ="+ new Factorial().factorial(n));
 
     }
 }

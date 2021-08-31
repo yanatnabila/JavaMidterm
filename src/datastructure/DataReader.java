@@ -50,9 +50,9 @@ public class DataReader {
             System.out.println("Error unable to read");
 
 
-}
+        }
         String[] storeArray = store.split(" ");
-       Stack<String> stack = new Stack<String>();
+        Stack<String> stack = new Stack<String>();
         // empty stack and list
         Stack<String> stack = new Stack<String>();
         LinkedList<String> list = new LinkedList<String>();
@@ -66,9 +66,9 @@ public class DataReader {
         // retrieve FIFO order form linked list
         System.out.println("LinkedList FIFO : ");
 
-        System.out.print (list.remove() + " ");
+        System.out.print(list.remove() + " ");
         while (!list.isEmpty())
-            System.out.print (list.remove() + " ");
+            System.out.print(list.remove() + " ");
         System.out.println();
         // since stack if LIFO
         System.out.println("Stack FILO : ");
