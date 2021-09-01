@@ -353,7 +353,7 @@ What are jUnit and testNG?
 Answer:JUnit and TestNG are the most popular testing frameworks for Java applications. Both of these frameworks are easy to use. So when it comes to chose the testing framework for your application, it’s better to have a high-level idea of what features are present in one or the other and then take the informed decision based on your project requirements.
 
 What are the dependencies for this project?
-Answer:
+Answer:ependencies are quick solutions with convenient packaging. They are modules which provide specific functionality. For example, the Azure Storage Blobs package is a solution for managing your data on Azure cloud, which you can use in your project. You could rely on multiple such libraries, but there is a price to pay. You will need to manage them in your project.
 
 What is dependency injection in Java?
 Answer:Any application is composed of many objects that collaborate with each other to perform some useful stuff. Traditionally each object is responsible for obtaining its own references to the dependent objects (dependencies) it collaborate with. This leads to highly coupled classes and hard-to-test code.

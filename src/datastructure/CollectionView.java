@@ -17,7 +17,12 @@ public class CollectionView {
         map.put(4, "Boston");
         map.put(5, "San Jose");
         map.put(6, "Seattle");
-          System.out.println("Collection view is:"+ map.values());
+        System.out.println("Collection view is:"+ map.values());
+        Set<Integer> keys-map.keySet();
+        for(int key:keys){
+
+        System.out.println(key + ""+map.get(key));
+
     }
 
 }

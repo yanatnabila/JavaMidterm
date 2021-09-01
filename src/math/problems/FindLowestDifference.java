@@ -23,10 +23,11 @@ public class FindLowestDifference {
             {
                 // Sort both arrays
                 // using sort function
-               int[] Array1.sort(A);
-               int[] Array2.sort(B);
+                public class Main{
 
-                int a = 1, b = 1;
+                }
+              System.out.println();
+
 
                 // Initialize result as max value
                 int result = Integer.MIN_VALUE;
