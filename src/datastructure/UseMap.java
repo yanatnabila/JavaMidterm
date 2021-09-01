@@ -64,6 +64,7 @@ public class UseMap {
         map.put("1", list1);
         map.put("2", list2);
         map.put("3", list3);
+        System.out.println();
     }
 
 }

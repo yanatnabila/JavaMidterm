@@ -133,28 +133,47 @@ Answer:1) HashMap is non synchronized. It is not-thread safe and can't be shared
 
 What are the major data structures used in the following areas : RDBMS, Network data model and Hierarchical data model
 Answer:
+· RDBMS – Array (i.e. Array of structures)
+
+· Network data model – Graph
+
+· Hierarchical data model – Trees
 
 How do HashMaps work in Java? How do they store values, and when are they useful?
 Answer:
-
+HashMap is a part of the Java collection framework. It uses a technique called Hashing. It implements the map interface. It stores the data in the pair of Key and Value. HashMap contains an array of the nodes, and the node is represented as a class. It uses an array and LinkedList data structure internally for storing Key and Value
 What is ArrayIndexOutOfBoundsException in java? When does it occur?
-Answer:
+Answer:The ArrayIndexOutOfBoundsException is a subclass of IndexOutOfBoundsException, and it implements the Serializable interface.
+The ArrayIndexOutOfBoundsException occurs whenever we are trying to access any item of an array at an index which is not present in the array. In other words, the index may be negative or exceed the size of an array.
 
 What are the different ways of copying an array into another array?
-Answer:
+-Copying element by element − One way is to create an empty array with the length of the original array, and copy each element (in a loop).
+-Using the clone() method − The clone() method of the class java.lang.Object accepts an object as a parameter, creates and returns a copy of it.
+-Using the System.arraycopy() method − The copy() method of the System class accepts two arrays (along with other details) and copies the contents of one array to other.
 
 What is DFS and BFS?
-Answer:
+Answer:BFS is an algorithm that is used to graph data or searching tree or traversing structures. The algorithm efficiently visits and marks all the key nodes in a graph in an accurate breadthwise fashion.
+       This algorithm selects a single node (initial or source point) in a graph and then visits all the nodes adjacent to the selected node. Once the algorithm visits and marks the starting node, then it moves towards the nearest unvisited nodes and analyses them.
+       Once visited, all nodes are marked. These iterations continue until all the nodes of the graph have been successfully visited and marked. The full form of BFS is the Breadth-first search.
+DFS is an algorithm for finding or traversing graphs or trees in depth-ward direction. The execution of the algorithm begins at the root node and explores each branch before backtracking. It uses a stack data structure to remember, to get the subsequent vertex, and to start a search, whenever a dead-end appears in any iteration. The full form of DFS is Depth-first search.
 
 What is Recursion?
-Answer:
+Answer:Recursion is the technique of making a function call itself. This technique provides a way to break complicated problems down into simple problems which are easier to solve.
 
 What are linear and non-linear data Structures?
-Answer:
-
+Answer:A linear data structure is a data structure that has data elements in sequential order. In a linear data structure, the adjacent elements are attached to each other. However, these data structures do not make better utilization of memory. Therefore, it can lead to memory wastage.
+       Array, Linked List, Stack, and Queue are some common examples of linear data structures. An array stores data elements of the same data type. A linked list is a data structure that contains a set of nodes; each node stores data and address of another node. These nodes connect together to form a structure similar to a chain.
+A stack is an abstract data type that behaves similarly to a real-world stack. It follows LIFO (Last in First Out) order. In other words, the inserted last element is in the top of the stack. Therefore, the element to access the first is the last inserted element. Moreover, inserting elements to the stack is called push operation and removing elements from the stack is called pop operation.
+A queue is also an abstract data structure, but it has two ends to insert elements and to delete elements. Inserting elements is called enqueue and removing elements is called dequeue.
+Non Linear data structure stores data in a non-sequential manner. It forms a hierarchical relationship among the child elements and parent elements. In other words, the data items are attached to each other creating a relationship between them. It is not possible to insert elements, delete elements or go through the elements in sequential order. Usually, these data structures are more memory efficient.
+Trees and graphs are the most common nonlinear data structures. A tree data structure represents the nodes connected by edges. A binary tree is a tree data structure.  Every node in the binary tree can have a maximum of two children.
 
 Outline different sorting algorithms and their time complexities:
-
+The time complexity of an algorithm signifies the total time required by the program to complete its operations or execution. It is commonly expressed using the big O notation. The time complexity is very important factor in deciding whether an algorithm is efficient or not.
+The estimation of a time complexity is based on the number of elementary functions performed by an algorithm. We usually consider the worst case time complexity of an algorithm as it is the maximum time taken for any input size.
+Time Complexity: Time Complexity is defined as the number of times a particular instruction set is executed rather than the total time is taken. It is because the total time taken also depends on some external factors like the compiler used, processor’s speed, etc.
+Space Complexity: Space Complexity is the total memory space required by the program for its execution.
+Both are calculated as the function of input size(n).in spite of these parameters the efficiency of an algorithm also depends upon the nature and size of the input.
 
 Draw a table with time complexity in which it will summarize all the data structure feature's advantages and disadvantages.
   a) In terms of Accessing elements:
