@@ -145,6 +145,7 @@ Answer:An API can be described as a way to enable computers to possess a common 
 Java Application Programming Interface (API) is the area of Java development kit (JDK). An API includes classes, interfaces, packages and also their methods, fields, and constructors.
 All these built-in classes give benefits to the programmer.  A user interface offers the basic user interaction between user and computer; in the same manner, the API works as an application program interface that gives connection amongst the software as well as the consumer. API includes classes and packages which usually assist a programmer in minimizing the lines of a program.
 some API's are: GraphQL, Rest, Restassured, SaopUI.
+
 Does java support multiple inheritance? Why or why not?
 Answer:Java does not support multiple inheritance.a class cannot extend more than one class. Multiple inheritances lead to ambiguity.
 Consider a case where class B extends class A and Class C and both class A and C have the same method display().
@@ -166,6 +167,7 @@ There are mainly two types of exceptions: checked and unchecked. An error is con
 -Error
 Exception Handling is a mechanism to handle runtime errors such as ClassNotFoundException, IOException, SQLException, RemoteException, etc.
 
+333.
 What is static keyword? When and how do we use it?
 Answer:The Static Modifier
        Static Variables
